@@ -1,0 +1,213 @@
+/* General Layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Dark mode and light mode styles */
+  .dark-mode {
+    background-color: #121212;
+    color: white;
+  }
+  
+  .light-mode {
+    background-color: #f5f5f5;
+    color: black;
+  }
+  
+  /* App Container */
+  .app-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    min-height: 100vh;
+    background-color: inherit;
+  }
+  
+  /* Title Styling */
+  h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    text-align: center;
+  }
+  
+  /* Toggle Dark/Light Mode Button */
+  .toggle-mode {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    background-color: #ccc;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background-color 0.3s;
+  }
+  
+  .toggle-mode:hover {
+    background-color: #bbb;
+  }
+  
+  /* Language Select Dropdown */
+  .language-select,
+  .language-filter {
+    padding: 10px;
+    font-size: 1rem;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    cursor: pointer;
+    transition: border-color 0.3s;
+  }
+  
+  .language-select:focus,
+  .language-filter:focus {
+    border-color: #4CAF50;
+  }
+  
+  /* Code Input Form */
+  .debug-form {
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 20px;
+  }
+  
+  .code-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    resize: vertical;
+  }
+  
+  .debug-btn {
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+  }
+  
+  .debug-btn:hover {
+    background-color: #45a049;
+  }
+  
+  .debug-btn:disabled {
+    background-color: #aaa;
+  }
+  
+  /* Clear History Button */
+  .clear-history-btn {
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+  }
+  
+  .clear-history-btn:hover {
+    background-color: #d32f2f;
+  }
+  
+  /* Result and History Container */
+  .result-history-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 20px;
+  }
+  
+  .result-box,
+  .history-box {
+    flex: 1;
+    margin-right: 20px;
+    max-width: 48%;
+  }
+  
+  .history-box {
+    margin-right: 0;
+  }
+  
+  /* Syntax Highlighter Styling */
+  .history-item p {
+    margin: 5px 0;
+  }
+  
+  .history-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .history-item {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .history-item code {
+    font-size: 1rem;
+    color: #333;
+    background-color: #f4f4f4;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  
+  /* Copy to Clipboard Button */
+  .copy-btn {
+    background-color: #008CBA;
+    color: white;
+    padding: 5px 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  .copy-btn:hover {
+    background-color: #005f7f;
+  }
+  
+  /* Responsive Design for Small Screens */
+  @media screen and (max-width: 768px) {
+    .result-history-container {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .result-box,
+    .history-box {
+      max-width: 100%;
+      margin-right: 0;
+    }
+  
+    .clear-history-btn {
+      width: 100%;
+    }
+  
+    .debug-btn {
+      width: 100%;
+    }
+  }
+  

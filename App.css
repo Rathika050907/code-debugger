@@ -1,0 +1,165 @@
+/* General app layout */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+}
+
+/* Dark mode and light mode styles */
+.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+.light-mode {
+  background-color: #f5f5f5;
+  color: black;
+}
+
+/* Title and toggle mode button */
+h2 {
+  margin-bottom: 20px;
+}
+
+.toggle-mode {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  background-color: #ccc;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.language-select, .language-filter {
+  padding: 10px;
+  font-size: 1rem;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+/* Form for entering code */
+.debug-form {
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 20px;
+}
+
+.code-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.debug-btn {
+  padding: 10px;
+  font-size: 1rem;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.debug-btn:disabled {
+  background-color: #aaa;
+}
+
+/* Clear history button */
+.clear-history-btn {
+  padding: 10px;
+  font-size: 1rem;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.clear-history-btn:hover {
+  background-color: #d32f2f;
+}
+
+/* Result and History container (side by side) */
+.result-history-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 20px;
+}
+
+/* Result box styling */
+.result-box {
+  flex: 1;
+  margin-right: 20px;
+  max-width: 48%;
+}
+
+.history-box {
+  flex: 1;
+  max-width: 48%;
+}
+
+/* Syntax highlighter styling */
+.history-item p {
+  margin: 5px 0;
+}
+
+/* History list styling */
+.history-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.history-item {
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.history-item code {
+  font-size: 1rem;
+  color: #333;
+  background-color: #f4f4f4;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+/* Copy to clipboard button */
+.copy-btn {
+  background-color: #008CBA;
+  color: white;
+  padding: 5px 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.copy-btn:hover {
+  background-color: #005f7f;
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 768px) {
+  .result-history-container {
+    flex-direction: column;  /* Stack elements vertically on small screens */
+    align-items: stretch;
+  }
+
+  .result-box, .history-box {
+    max-width: 100%;
+    margin-right: 0; /* Remove right margin for stacked layout */
+  }
+}
